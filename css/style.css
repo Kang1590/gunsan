@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+html,body {color: #333;}
+a {color: #333; text-decoration: none;}
+li {list-style: none;}
+img {display: block; max-width: 100%;}
+
+main {display: flex;}
+
+#left {flex-basis: 200px;}
+/* 로고 */
+#left img[alt="logo"] {width: 100%; height: 90px;}
+/* 메뉴 */
+#left ul {margin: 30px 10px;}
+#left li {position: relative;}
+#left ul a {display: block; font-weight: 600;}
+
+a.mainMenu {padding: 10px; text-align: center; background: palevioletred; color: white;}
+a.mainMenu:hover,a.mainMenu.act {background: pink; color: white;}
+nav.subMenu {position: absolute; top: 0; left: 175px; width: 100%; background: cornflowerblue; display: none; z-index: 1;}
+nav.subMenu a {color: white; padding: 8px; text-align: center;}
+nav.subMenu a:hover,nav.subMenu.act {background: dodgerblue; color: white;}
+
+#spotMenu {border: 2px solid pink; text-align: center;}
+#spotMenu a:hover {color: dodgerblue; background: pink;}
+
+/* 가운데 메뉴 */
+#center {flex-basis: 400px; margin: 0 20px;}
+
+#banner {display: flex; align-items: center; padding: 10px;}
+#banner img[alt="배너"] {width: 80px;}
+#banner div {flex: 1; padding: 0 20px 0 20px;}
+#banner h3 {}
+#banner p {display: flex; align-items: center;padding-top: 3px;}
+#banner p a {transition: 0.5s;}
+#banner p a:hover {transform: translateX(10px);}
+#banner img[alt="화살표"] {width: 42px; margin-left: 15px;}
+
+/* 공지사항 */
+#notice {margin-top: 10px;}
+#notice h3 {border-bottom: 38px solid pink; border-left: 20px solid transparent; border-right: 20px solid transparent; width: 120px;}
+#notice>h3 span {display: block; transform: translateY(33px); color: #0d68d0;}
+
+#notice ol {border-top: 2px solid pink; line-height: 180%; padding-top: 5px; padding-left: 5px;}
+#notice li span {float: right; padding-right: 10px;}
+#notice li a:hover {color: pink;}
+
+/* 갤러리 */
+#gallery {margin-top: 10px; margin-bottom: 20px;}
+#gallery h3 {border-bottom: 38px solid #0d68d0; border-left: 20px solid transparent; border-right: 20px solid transparent; width: 130px;}
+#gallery>h3 span {display: block; transform: translateY(35px) translateX(15px); color: pink;}
+#gallery>div {display: flex; justify-content: space-between; border-top: 1px solid #0d68d0; padding-top: 10px;}
+#gallery img {width: 185px; padding: 10px;}
+#gallery a {display: block; text-align: center;}
+#gallery a:hover {color: #0d68d0;}
+
+/* 바로가기 */
+#quick h3 {display: none;}
+#quick>div {display: flex; border-top: 2px dotted #bbb; padding-top: 20px;}
+#quick>div>div {margin: 10px;}
+#quick a {display: block; text-align: center; padding-top: 5px;}
+#quick a:hover {color: powderblue;}
+
+/* 슬라이드 */
+#right {width: calc(100% - 200px - 400px); height: calc(100vh - 120px); overflow: hidden; position: relative;}
+#right h2 {display: none;}
+#slide {display: flex; position: relative;}
+#slide img {width: 100%; height: calc(100vh - 120px);}
+
+/* 푸터 */
+footer {height: 120px; background: pink; display: flex;}
+footer>div {border-left: 2px dotted #aaa; border-right: 2px dotted #aaa; width: 1800px;}
+footer img {width: 200px; height: 120px;}
+footer nav {padding: 12px 20px 6px 20px; border-bottom: 2px dotted #aaa; margin-bottom: 10px; margin-top: 10px;}
+footer nav a {padding: 0 10px;}
+footer nav a:hover {color: white;}
+footer p {padding: 0 30px; flex: 1; text-align: justify;}
+footer select {align-self: center; margin: 0 30px;}
+
+/* 팝업모달 */
+#popup {position: fixed; top: 100px; left: calc((100% - 600px) / 2); width: 600px; background: pink; padding: 40px; border-radius: 20px; text-align: justify; line-height: 180%; display: none;}
+#popup p {padding: 20px 0; color: #333;}
+#popup button {float: right; padding: 3px 8px 4px;}
